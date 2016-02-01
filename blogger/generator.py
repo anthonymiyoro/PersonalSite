@@ -7,10 +7,12 @@ app = Flask(__name__)
 def index():
     return 'Hello World!'
 
-@app.route('/blog/post')
+
+@app.route('/blog/post/')
 def post():
     # renders to the post content_variable in the post.html
-    return render_template('post.html', post_content='Hello World(But for a template!)')
+    return render_template('post.html', post_content='Hello,World(But for a template)!')
+
 
 if __name__ == '__main__':
     app.run(port=8000)
