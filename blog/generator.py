@@ -31,6 +31,14 @@ class Post(object):
         self.__dict__.update(yaml.load(content))
 
 
+# changes the format of the date of the post
+def format_date(value, format='%B %d, %Y'):
+    return value.strftime(format)
+app.jinja_env.filters['date']=format_date
+
+# @app.context_processor
+# def inject_format_date():
+#     return {'format_date':format_date}
 
 
 @app.route('/')
@@ -39,7 +47,7 @@ def index():
 
 
 @app.route('/blog/<path:path>')
-def post(path=None):
+def post(path):
     path = os.path.join('posts', path + POSTS_FILE_EXTENTION)
     post = Post(path)
     # renders to the post content_variable in the post.html
