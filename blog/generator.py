@@ -36,14 +36,11 @@ def format_date(value, format='%B %d, %Y'):
     return value.strftime(format)
 app.jinja_env.filters['date']=format_date
 
-# @app.context_processor
-# def inject_format_date():
-#     return {'format_date':format_date}
-
 
 @app.route('/')
 def index():
-    return 'Hello World!'
+    posts = [Post('posts/hello.md')]
+    return render_template('index.html', posts=posts)
 
 
 @app.route('/blog/<path:path>')
