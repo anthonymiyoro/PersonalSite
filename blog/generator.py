@@ -122,8 +122,8 @@ def index():
 
 @app.route('/blog/<path:path>')
 def post(path):
-    posts = blog.get_post_or_404(path)
-    return render_template('post.html', post=posts)
+    post = blog.get_post_or_404(path)
+    return render_template('post.html', post=post)
 
 if __name__ == '__main__':
     post_files = [post.filepath for post in blog.posts]
