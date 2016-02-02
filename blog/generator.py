@@ -1,13 +1,11 @@
 import os
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, abort
 from werkzeug import cached_property
 import markdown
 import yaml
 
 POSTS_FILE_EXTENSION = '.md'
-
-app = Flask(__name__)
 
 
 class Blog(object):
@@ -16,19 +14,28 @@ class Blog(object):
         self.file_ext = file_ext
         self._app = app
         self._cache = {}
-        self.initialize_cache()
+        self._initialize_cache()
 
+    @property
+    def posts(self):
+            return self._cache.values()
 
+    def get_post_or_404(self, path):
+            # returns a 404 to the browser
+            try:
+                return self._cache[path]
+            except KeyError:
+                abort(404)
 
     def _initialize_cache(self):
-        # Loops through the posts in the cache
-        for (root, dirpaths, filepaths) in os.walk(self.root_dir):
-            for filepath in filepaths:
-                filename, ext = os.path.splitext(filepath)
-                if ext == file.file_ext:
-                    path = os.path.join(root, filepath).replace(self.root_dir, '')
-                    post = Post(path, root_dir=self.root_dir)
-                    self.cache[post.urlpath] = post
+           # Loops through the posts in the cache
+            for (root, dirpaths, filepaths) in os.walk(self.root_dir):
+                for filepath in filepaths:
+                    filename, ext = os.path.splitext(filepath)
+                    if ext == self.file_ext:
+                        path = os.path.join(root, filepath).replace(self.root_dir, '')
+                        post = Post(path, root_dir=self.root_dir)
+                        self._cache[post.urlpath] = post
 
 
 # turns markdown into html
@@ -58,23 +65,24 @@ class Post(object):
         self.__dict__.update(yaml.load(content))
 
 
+app = Flask(__name__)
+blog = Blog(app, root_dir='posts')
+
+
+@app.template_filter('date')
 # changes the format of the date of the post
 def format_date(value, format='%B %d, %Y'):
     return value.strftime(format)
 
 
-app.jinja_env.filters['date'] = format_date
-
-
 @app.route('/')
 def index():
-    posts = [Post('hello.md', root_dir='posts')]
-    return render_template('index.html', posts=posts)
+    return render_template('index.html', posts=blog.posts)
 
 
 @app.route('/blog/<path:path>')
 def post(path):
-    post = Post(path + POSTS_FILE_EXTENSION, root_dir='posts')
+    post = blog.get_post_or_404(path)
     return render_template('post.html', post=post)
 
 
