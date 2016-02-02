@@ -1,5 +1,6 @@
-import collections
 import os
+import sys
+import collections
 
 from flask import Flask, render_template, url_for, abort
 from flask.ext.frozen import Freezer
@@ -120,12 +121,16 @@ def index():
     return render_template('index.html', posts=blog.posts)
 
 
-@app.route('/blog/<path:path>')
+@app.route('/blog/<path:path>/')
 def post(path):
     post = blog.get_post_or_404(path)
     return render_template('post.html', post=post)
 
 if __name__ == '__main__':
-    post_files = [post.filepath for post in blog.posts]
-    app.run(port=8000, debug=True, extra_files=post_files)
+    # Changes the generated webpage to static
+    if len(sys.argv) > 1 and sys.argv[1] == 'build':
+        freezer.freeze()
+    else:
+        post_files = [post.filepath for post in blog.posts]
+        app.run(port=8000, debug=True, extra_files=post_files)
 
