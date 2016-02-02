@@ -2,6 +2,7 @@ import collections
 import os
 
 from flask import Flask, render_template, url_for, abort
+from flask.ext.frozen import Freezer
 from werkzeug import cached_property
 import markdown
 import yaml
@@ -90,8 +91,8 @@ class Post(object):
         return markdown.markdown(content)
 
     @property
-    def url(self):
-        return url_for('post', path=self.urlpath)
+    def url(self, _external=False):
+        return url_for('post', path=self.urlpath, _external=_external)
 
     def _initialize_metadata(self):
         content = ''
@@ -105,6 +106,7 @@ class Post(object):
 
 app = Flask(__name__)
 blog = Blog(app, root_dir='posts')
+freezer = Freezer(app)
 
 
 @app.template_filter('date')
@@ -120,8 +122,8 @@ def index():
 
 @app.route('/blog/<path:path>')
 def post(path):
-    post = blog.get_post_or_404(path)
-    return render_template('post.html', post=post)
+    posts = blog.get_post_or_404(path)
+    return render_template('post.html', post=posts)
 
 if __name__ == '__main__':
     post_files = [post.filepath for post in blog.posts]

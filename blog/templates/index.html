@@ -14,8 +14,8 @@
         {% for posts in posts %}
             <div class="post">
                 <span class="post-date">{{ post.date|date }}</span>
-                <a href="{{ post.url }}" class="post-title">
-                    {{ post.title }}{% if post.subtitle %}: {{ post.subtitle }}{% endif %}
+                <a href="{{ posts.url }}" class="post-title">
+                    {{ posts.title }}{% if posts.subtitle %}: {{ posts.subtitle }}{% endif %}
                 </a>
             </div>
     {% endfor %}
