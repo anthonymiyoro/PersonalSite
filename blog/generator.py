@@ -19,12 +19,15 @@ class SortedDict(collections.MutableMapping):
             self._key_fn = lambda k: self._items[k]
         self._reverse = reverse
 
+        if items is not None:
+            self.update(items)
+
     def __getitem__(self, key):
         return self._items[key]
 
     def __setitem__(self, key, value):
         self._items[key] = value
-        if key not in self.keys:
+        if key not in self._keys:
             self._keys.append(key)
             self._keys.sort(key=self._key_fn, reverse=self._reverse)
 

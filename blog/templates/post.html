@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
-    {% block head %}
-        <title>{{ post.title }}{% if post.subtitle %}{{ post.subtitle }}{% endif %}</title>
-    {% endblock head %}
+{% block head %}
+    <title>{{ post.title }}{% if post.subtitle %}: {{ post.subtitle }}{% endif %}</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/post.css') }}">#}
+{% endblock head %}
 
 {% block content %}
-    <!--header-->
+    <!-- Header -->
     <div id="header">
         <h1>{{ post.title }}</h1>
         {% if post.subtitle %}
@@ -14,9 +15,8 @@
         <h3 id="date">{{ post.date|date }}</h3>
     </div>
 
-    <!--content-->
+    <!-- Content -->
     <div id="content">
-        <!--variable containing the content of the post-->
         {{ post.html|safe }}
     </div>
 {% endblock content %}
