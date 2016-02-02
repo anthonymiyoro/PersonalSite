@@ -122,3 +122,8 @@ def index():
 def post(path):
     post = blog.get_post_or_404(path)
     return render_template('post.html', post=post)
+
+if __name__ == '__main__':
+    post_files = [post.filepath for post in blog.posts]
+    app.run(port=8000, debug=True, extra_files=post_files)
+
