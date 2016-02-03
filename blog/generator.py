@@ -8,6 +8,7 @@ from werkzeug import cached_property
 import markdown
 import yaml
 
+FREEZER_BASE_URL = 'anthonymiyoro.github.io'
 POSTS_FILE_EXTENSION = '.md'
 
 
@@ -89,7 +90,7 @@ class Post(object):
     def html(self):
         with open(self.filepath, 'r') as fin:
             content = fin.read().split('\n\n', 1)[1].strip()
-        return markdown.markdown(content)
+        return markdown.markdown(content, extensions=['codehilite'])
 
     @property
     def url(self, _external=False):
@@ -105,7 +106,9 @@ class Post(object):
         self.__dict__.update(yaml.load(content))
 
 
+DEBUG = True
 app = Flask(__name__)
+app.config.from_object(__name__)
 blog = Blog(app, root_dir='posts')
 freezer = Freezer(app)
 
@@ -126,6 +129,7 @@ def post(path):
     post = blog.get_post_or_404(path)
     return render_template('post.html', post=post)
 
+
 if __name__ == '__main__':
     # Changes the generated webpage to static
     if len(sys.argv) > 1 and sys.argv[1] == 'build':
@@ -133,4 +137,3 @@ if __name__ == '__main__':
     else:
         post_files = [post.filepath for post in blog.posts]
         app.run(port=8000, debug=True, extra_files=post_files)
-
