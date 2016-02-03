@@ -8,7 +8,9 @@ from werkzeug import cached_property
 import markdown
 import yaml
 
-FREEZER_BASE_URL = 'anthonymiyoro.github.io'
+FREEZER_BASE_URL = 'http://anthonymiyoro.com'
+FREEZER_DESTINATION_IGNORE = ['.git*', 'CNAME']
+DOMAIN = 'anthonymiyoro.com'
 POSTS_FILE_EXTENSION = '.md'
 
 
