@@ -9,8 +9,6 @@ import markdown
 import yaml
 
 FREEZER_BASE_URL = 'anthonymiyoro.github.io'
-FREEZER_DESTINATION_IGNORE = ['.git*', 'CNAME']
-DOMAIN = 'anthonymiyoro.com'
 POSTS_FILE_EXTENSION = '.md'
 
 
