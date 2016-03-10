@@ -1,49 +1,738 @@
-<html lang="en">
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lemonage</title>
+        <meta name="description" content="HTML5 Design Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    
-    <link rel="stylesheet" href="/static/css/index.css">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Linea Basic -->
+        <link rel="stylesheet" href="css/lineabasic.css">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Slick carousel -->
+        <link rel="stylesheet" href="css/slick.css">
+        <!-- Magnific Popup -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
 
+        <script src="js/vendor/modernizr.js"></script>
 
-    <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/syntax.css">
+    </head>
+    <body data-spy="scroll" data-offset="50" data-target=".navbar-default">
 
-</head>
-<body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
 
-   
-    <div id="header">
-        <h1>My blog</h1>
-    </div>
-
-    <div id="posts">
-        
-            <div class="post">
-                <span class="post-date">February 03, 2016</span>
-                <a href="/blog/world/" class="post-title">
-                    The World is calling
-                </a>
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top is-transparent" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Lemonage</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Extra<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="bloglist.html">Blog List</a></li>
+                                <li><a href="bloglist-sidebar.html">Blog List Sidebar</a></li>
+                                <li><a href="post-centered.html">Post centered</a></li>
+                                <li><a href="post-sample.html">Post with Sidebar</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                                <li><a href="comingsoon.html">Coming Soon</a></li>
+                                <li><a href="shortcodes.html">Shortcodes</a></li>
+                                <li class="has-dropdown">
+                                    <a href="#">Submenu Level<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu item</a></li>
+                                        <li><a href="#">Another item</a></li>
+                                        <li><a href="#">Something item</a></li>
+                                        <li><a href="#">Last menu item</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-    
-            <div class="post">
-                <span class="post-date">February 01, 2016</span>
-                <a href="/blog/hello/" class="post-title">
-                    hello, World!
-                </a>
+        </nav>
+
+        <!-- Header -->
+        <header id="home" class="header hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="banner">
+                            <h4>We are Lemonage</h4>
+                            <h1>Hello everybody</h1>
+                            <p>Here we are. Vintage looks and modern ideas.</p>
+                            <a href="#about" class="btn btn-warning" role="button">Learn More</a>
+                        </div>
+                    </div>
+                    <span class="scroll-down icon icon-basic-magic-mouse"></span>
+                </div>
             </div>
-    
-    </div>
+        </header>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</body>
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <header class="section-header">
+                            <h3 class="section-title" data-text="About Us">We work everywhere</h3>
+                            <p>Maecenas quis bibendum ex. Phasellus porttitor est ac sem porta vestibulum. Integer a felis sapien. Suspendisse ultricies vitae sapien quis egestas. Mauris et iaculis orci, sit amet accumsan tortor. Sed quis ipsum nulla. Morbi et metus sed velit fringilla ut nisi.</p>
+                        </header>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mockup" data-animation="fadeInUp" data-animation-delay="02">
+                            <img src="img/stationery.jpg" alt="mockup" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature">
+                            <i class="icon icon-basic-lightbulb"></i>
+                            <h4 class="small-title centered">Bootstrap 3</h4>
+                            <p>Compellingly implement functionalized bandwidth and reliable paradigms efficiently transform maintainable synergy</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature">
+                            <i class="icon icon-basic-pencil-ruler"></i>
+                            <h4 class="small-title centered">Responsive</h4>
+                            <p>Compellingly implement functionalized bandwidth and reliable paradigms efficiently transform maintainable synergy</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature">
+                            <i class="icon icon-basic-settings"></i>
+                            <h4 class="small-title centered">Customizable</h4>
+                            <p>Compellingly implement functionalized bandwidth and reliable paradigms efficiently transform maintainable synergy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quotes -->
+        <section class="quotes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="quote-list">
+                            <li>
+                                <blockquote class="quote">
+                                    Simplicity is the ultimate sophistication.
+                                    <cite>Leonardo da Vinci</cite>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    Style is a way to say who you are without having to speak.
+                                    <cite>Rachel Zoe</cite>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    It´s very easy be different, but very difficult to be better.
+                                    <cite>Jonathan Ive</cite>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header class="section-header">
+                            <h4 class="section-title" data-text="Portfolio">Check our flow</h4>
+                            <p>Suspendisse ultricies vitae sapien quis egestas. Phasellus porttitor <br>est ac sem porta vestibulum. Integer a felis sapien.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul id="filter" class="filter">
+                            <li><a data-filter="*" class="btn btn-default btn-sm" role="button">All</a></li>
+                            <li><a data-filter=".webdesign" class="btn btn-default btn-sm" role="button">Webdesign</a></li>
+                            <li><a data-filter=".illustration" class="btn btn-default btn-sm" role="button">Illustration</a></li>
+                            <li><a data-filter=".photography" class="btn btn-default btn-sm" role="button">Photography</a></li>
+                            <li><a data-filter=".branding" class="btn btn-default btn-sm" role="button">Branding</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <article class="isotope">
+                            <div class="grid-sizer"></div>
+                            <div class="gutter-sizer"></div>
+                            <div class="item webdesign" data-category="webdesign">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="item illustration" data-category="illustration">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project2.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="item photography" data-category="photography">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="item branding" data-category="branding">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project2.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="item webdesign" data-category="webdesign">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="item photography" data-category="posters">
+                                <figure class="item-figure">
+                                    <img src="img/thumbs/placeholder3.jpg" class="img-responsive" alt="img">
+                                    <figcaption class="overlay">
+                                        <p>Lorem Ipsum dolor ismet</p>
+                                        <a href="project2.html" class="ajax-popup-link"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                        <a href="#" class="btn btn-default load-more" role="button">Load More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section class="call-to">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <article class="action">
+                            <h5>Have you big idea or interesant project?</h5>
+                            <a href="#" class="btn btn-danger" role="button">Lets talk</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header class="section-header">
+                            <h4 class="section-title" data-text="Services">What we do best</h4>
+                            <p>Suspendisse ultricies vitae sapien quis egestas. Phasellus porttitor <br>est ac sem porta vestibulum. Integer a felis sapien.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="fadeInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-display"></i>
+                            <h5>Web Design</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="fadeInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-gunsight"></i>
+                            <h5>Branding</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="fadeInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-photo"></i>
+                            <h5>Photography</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="fadeInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-gear"></i>
+                            <h5>Development</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="zoomInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-paperplane"></i>
+                            <h5>Advertising</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="zoomInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-case"></i>
+                            <h5>Marketing</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="zoomInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-sheet-pencil"></i>
+                            <h5>Copywriting</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service" data-animation="zoomInUp" data-animation-delay="01">
+                            <i class="icon icon-basic-life-buoy"></i>
+                            <h5>Support</h5>
+                            <p>Phasellus libero consectetur ellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem ipsum lacus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Counters -->
+        <section class="counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="987" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Creative Ideas</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="218" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Projects Designed</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="1356" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Pizzas Eaten</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="1856" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Coffee Drunk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header class="section-header">
+                            <h4 class="section-title" data-text="Meet the Team">We are awesome</h4>
+                            <p>Suspendisse ultricies vitae sapien quis egestas. Phasellus porttitor <br>est ac sem porta vestibulum. Integer a felis sapien.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="team-figure">
+                            <img src="img/thumbs/placeholder2.jpg" class="img-responsive" alt="img">
+                            <figcaption class="team-overlay">
+                                <ul class="social-list">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-behance"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <h5 class="member-name" data-text="Creative Director">Kristin Stevens</h5>
+                        <p class="text-center">Maecenas quis bibendum ex. Phasellus porttitor est ac sem porta vestibulum.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="team-figure">
+                            <img src="img/thumbs/placeholder2.jpg" class="img-responsive" alt="img">
+                            <figcaption class="team-overlay">
+                                <ul class="social-list">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-behance"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <h5 class="member-name" data-text="Lead Developer">Robert Anderson</h5>
+                        <p class="text-center">Maecenas quis bibendum ex. Phasellus porttitor est ac sem porta vestibulum.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="team-figure">
+                            <img src="img/thumbs/placeholder2.jpg" class="img-responsive" alt="img">
+                            <figcaption class="team-overlay">
+                                <ul class="social-list">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-behance"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <h5 class="member-name" data-text="Marketing Manager">Patricia Graham</h5>
+                        <p class="text-center">Maecenas quis bibendum ex. Phasellus porttitor est ac sem porta vestibulum.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="team-figure">
+                            <img src="img/thumbs/placeholder2.jpg" class="img-responsive" alt="img">
+                            <figcaption class="team-overlay">
+                                <ul class="social-list">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-behance"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <h5 class="member-name" data-text="Creative Designer">Jack Williams</h5>
+                        <p class="text-center">Maecenas quis bibendum ex. Phasellus porttitor est ac sem porta vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="chart" data-percent="89"><!--data-bar-color="#ffb400"-->
+                            <span class="percent" data-from="0" data-to="89"></span>
+                        </div>
+                        <h5>HTML5</h5>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="chart" data-percent="85">
+                            <span class="percent" data-from="0" data-to="85"></span>
+                        </div>
+                        <h5>CSS3</h5>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="chart" data-percent="75">
+                            <span class="percent" data-from="0" data-to="75"></span>
+                        </div>
+                        <h5>jQuery</h5>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="chart" data-percent="80">
+                            <span class="percent" data-from="0" data-to="80"></span>
+                        </div>
+                        <h5>Adobe</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header class="section-header">
+                            <h4 class="section-title" data-text="Blog">Our stories</h4>
+                            <p>Suspendisse ultricies vitae sapien quis egestas. Phasellus porttitor <br>est ac sem porta vestibulum. Integer a felis sapien.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <article class="post preview gridview">
+                            <div class="post-media">
+                                <ul class="slider">
+                                    <li><a href="#"><img src="img/thumbs/placeholder3.jpg" alt="..."></a></li>
+                                    <li><a href="#"><img src="img/thumbs/placeholder3a.jpg" alt="..."></a></li>
+                                    <li><a href="#"><img src="img/thumbs/placeholder3b.jpg" alt="..."></a></li>
+                                </ul>
+                            </div>
+                            <div class="caption">
+                                <ul class="meta-list">
+                                    <li><span class="meta">December 26, 2014</span></li>
+                                    <li><span class="meta">Photography</span></li>
+                                </ul>
+                                <h5 class="post-title"><a href="post-sample.html">Mountains adventure</a></h5>
+                                <p>Phasellus a nisl libero. Pellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem lacus.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <article class="post preview gridview">
+                            <div class="post-media">
+                                <a href="#"><img src="img/thumbs/placeholder3.jpg" alt="..."></a>
+                            </div>
+                            <div class="caption">
+                                <ul class="meta-list">
+                                    <li><span class="meta">December 12, 2014</span></li>
+                                    <li><span class="meta">Inspiration</span></li>
+                                </ul>
+                                <h5 class="post-title"><a href="post-sample.html">5 Morning ideas</a></h5>
+                                <p>Phasellus a nisl libero. Pellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem lacus.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <article class="post preview gridview">
+                            <div class="post-media">
+                                <a href="#"><img src="img/thumbs/placeholder3.jpg" alt="..."></a>
+                            </div>
+                            <div class="caption">
+                                <ul class="meta-list">
+                                    <li><span class="meta">November 23, 2014</span></li>
+                                    <li><span class="meta">Web Design</span></li>
+                                </ul>
+                                <h5 class="post-title"><a href="post-sample.html">Active Dashboard</a></h5>
+                                <p>Phasellus a nisl libero. Pellentesque palacerat viverra felis a maximus. Nulla etat porttitor lorem lacus.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tweets -->
+        <section class="tweets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="twitter-feed"></div><!-- Twitter Feed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="pricing-table list-unstyled" data-animation="flipInY" data-animation-delay="02">
+                            <li class="title">Beginner</li>
+                            <li class="price">19.99<sup>$</sup></li>
+                            <li class="description">1 Database</li>
+                            <li class="description">5GB Storage</li>
+                            <li class="description">20 Users</li>
+                            <li class="cta-button"><a class="btn btn-warning btn-block" href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="pricing-table list-unstyled" data-animation="flipInY" data-animation-delay="02">
+                            <li class="title">Standard</li>
+                            <li class="price">39.99<sup>$</sup></li>
+                            <li class="description">1 Database</li>
+                            <li class="description">5GB Storage</li>
+                            <li class="description">20 Users</li>
+                            <li class="cta-button"><a class="btn btn-danger btn-block" href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="pricing-table list-unstyled" data-animation="flipInY" data-animation-delay="02">
+                            <li class="title">Premium</li>
+                            <li class="price">69.99<sup>$</sup></li>
+                            <li class="description">1 Database</li>
+                            <li class="description">5GB Storage</li>
+                            <li class="description">20 Users</li>
+                            <li class="cta-button"><a class="btn btn-warning btn-block" href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients -->
+        <section class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <ul class="brands">
+                            <li><img src="img/brands/vintlogo1-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo2-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo3-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo4-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo5-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo3-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo4-white.png" alt="client" /></li>
+                            <li><img src="img/brands/vintlogo5-white.png" alt="client" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <header class="section-header">
+                            <h4 class="section-title" data-text="Contact">Get in touch</h4>
+                            <p>Suspendisse ultricies vitae sapien quis egestas. Phasellus porttitor <br>est ac sem porta vestibulum. Integer a felis sapien.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <article class="form-detached">
+                            <form action="php/contact-form.php" id="contact-form">
+                                <div class="alert alert-success hidden" id="contact-alert-success">
+                                    <strong>Success!</strong> Thank you for your message. Reply will be in a while!
+                                </div>
+                                <div class="alert alert-danger hidden" id="contact-alert-error">
+                                    <strong>Error!</strong> Something went wrong sending your message.
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="name"></label>
+                                    <input type="text" class="form-control" value="" placeholder="Name" data-msg-required="Please enter your name." name="name" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="email"></label>
+                                    <input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." class="form-control" name="email" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="message"></label>
+                                    <textarea placeholder="Enter your message..." data-msg-required="Please enter your message." rows="6" class="form-control" name="message" id="message"></textarea>
+                                </div>
+                                <input type="submit" value="Send Message" class="btn btn-default btn-block" data-loading-text="Loading...">
+                            </form>
+                        </article>
+                    </div>
+                    <div class="col-md-5">
+                        <address class="address">
+                            <i class="icon icon-basic-mail"></i>
+                            <a href="mailto:#">info@themail.com</a>
+                        </address>
+                        <address class="address">
+                            <i class="icon icon-basic-geolocalize-01"></i>
+                            <strong>Lemonage Creative, Inc.</strong><br>
+                            795 Folsom Ave, Suite 600<br>
+                            San Francisco, CA 94107
+                        </address>
+                        <address class="address">
+                            <i class="icon icon-basic-smartphone"></i>
+                            (123) 456-7890
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gmap -->
+        <section class="map">
+            <a class="show-map"><div class="helper"><i class="fa fa-plus"></i><span>Show Map</span></div></a>
+            <div id="my-map"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" data-animation="zoomInRight" data-animation-delay="01">
+                        <h6><a href="#">Lemonage</a></h6>
+                        <ul class="social-list">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-pinterest"></a></li>
+                            <li><a href="#" class="fa fa-flickr"></a></li>
+                            <li><a href="#" class="fa fa-dribbble"></a></li>
+                            <li><a href="#" class="fa fa-behance"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/vendor/fastclick.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/vendor/jquery.appear.js"></script>                  <!-- jQuery Appear -->
+        <script src="js/vendor/jquery.easing.1.3.js"></script>              <!-- jQuery Easing -->
+        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>          <!-- Imagesloaded -->
+        <script src="js/vendor/isotope.pkgd.min.js"></script>               <!-- Isotope -->
+        <script src="js/vendor/slick.min.js"></script>                      <!-- Slick carousel -->
+        <script src="js/vendor/jquery.tweet.min.js"></script>               <!-- Tweet.js-Mod -->
+        <script src="js/vendor/jquery.countTo.js"></script>                 <!-- Count To -->
+        <script src="js/vendor/jquery.easypiechart.min.js"></script>        <!-- easyPieChart -->
+        <script src="js/vendor/jquery.magnific-popup.min.js"></script>      <!-- Magnific Popup -->
+
+        <script src="js/main.js"></script>
+
+        <script src="js/vendor/jquery.validate.min.js"></script>            <!-- jQuery Validate -->
+        <script src="js/contact.js"></script>
+
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script><!-- GMap -->
+        <script src="js/vendor/gmap3.min.js"></script>
+        <script src="js/mymap.js"></script>
+
+    </body>
 </html>
