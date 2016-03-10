@@ -5,7 +5,7 @@ header('Expires: ' . gmdate('r', 0));
 header('Content-type: application/json');
 
 // Enter your email address
-$to = 'your@mail.com';
+$to = 'anthony.miyoro@strathmore.edu';
 
 $subject = $_POST['subject'];
 
