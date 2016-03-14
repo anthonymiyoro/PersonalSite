@@ -500,7 +500,7 @@ figure {
   padding: 2em;
   text-align: center;
   color: #ffffff;
-  background-image: url(../img/backgrounds/250_Pier_by-Steve_1900x1440-min.jpeg) no-repeat scroll center center #c8c9c7;
+  background-image: url(../img/backgrounds/248_Lamu_by-Siambi_2560x1440-min.jpeg) no-repeat scroll center center #c8c9c7;
   background-size: cover;
 }
 .header::before {
@@ -520,7 +520,7 @@ figure {
 .hero {
   height: 100%;
   min-height: 100vh;
-  background: url(../img/backgrounds/250_Pier_by-Steve_1900x1440-min.jpeg) no-repeat scroll center center #c8c9c7;
+  background: url(../img/backgrounds/251_Ndovu_2560x1440-min.jpeg) 50% 50% / cover no-repeat scroll rgb(200, 201, 199);
   background-size: cover;
 }
 .banner {
@@ -1088,7 +1088,7 @@ figure {
   padding: 8em 0;
   text-align: center;
   color: #ffffff;
-  background: url(../img/backgrounds/placeholder1.jpg) no-repeat scroll center center #101820;
+  background-color: #101820;
   background-size: cover;
 }
 .skills::before {
@@ -1553,7 +1553,7 @@ figure {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555;
+  color: #101820;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9d9d6;
