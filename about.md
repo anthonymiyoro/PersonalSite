@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-### My Resume
 
 [My Resume](https://github.com/anthonymiyoro/anthonymiyoro.github.io/blob/master/resume.pdf)
 
