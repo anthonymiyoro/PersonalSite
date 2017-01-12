@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-[My Resume](https://github.com/anthonymiyoro/anthonymiyoro.github.io/blob/master/resume.pdf)
+[My Resume](https://raw.githubusercontent.com/anthonymiyoro/anthonymiyoro.github.io/0a67b3b3c423655c5125af2030e0701ff0afa1b8/resume.pdf)
 
 ### Contact me
 
