@@ -6,7 +6,7 @@
 name: Anthony Miyoro
 
 # Short bio or description (displayed in the header)
-description: Software Engineer from Nairobi, Kenya
+description:
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/12515332?v=3&s=460
@@ -76,6 +76,11 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
 
 # Exclude these files from your production _site
 exclude:
